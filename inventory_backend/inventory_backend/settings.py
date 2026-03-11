@@ -25,8 +25,11 @@ SECRET_KEY = 'django-insecure-y^&xgfkz)2-hj9#faeywj2r+zgqlotcnbzny9awj!2l7mwm-@u
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["*"]
-
+ALLOWED_HOSTS = [
+    "localhost",
+    "127.0.0.1",
+    ".onrender.com"
+]
 
 # Application definition
 
@@ -75,36 +78,11 @@ TEMPLATES = [
         },
     },
 ]
-CORS_ALLOW_ALL_ORIGINS = False
+CORS_ALLOW_ALL_ORIGINS = True
 CORS_ALLOWED_ORIGINS = [
-    "https://erp-inventory-system-woad.vercel.app",
     "http://localhost:5173",
     "http://127.0.0.1:5173",
-    
-]
-
-CORS_ALLOW_CREDENTIALS = True
-CORS_ALLOW_HEADERS = [
-    "accept",
-    "authorization",
-    "content-type",
-    "origin",
-    "user-agent",
-    "x-csrftoken",
-    "x-requested-with",
-]
-CORS_ALLOW_METHODS = [
-    "DELETE",
-    "GET",
-    "OPTIONS",
-    "PATCH",
-    "POST",
-    "PUT",
-]
-CORS_PREFLIGHT_MAX_AGE = 86400
-
-CSRF_TRUSTED_ORIGINS = [
-    "https://erp-inventory-system-woad.vercel.app"
+    "https://your-frontend.onrender.com"
 ]
 
 WSGI_APPLICATION = 'inventory_backend.wsgi.application'
@@ -156,8 +134,6 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/6.0/howto/static-files/
 
 STATIC_URL = 'static/'
-STATIC_ROOT = BASE_DIR / "staticfiles"
-
 
 REST_FRAMEWORK = {
     "DEFAULT_AUTHENTICATION_CLASSES": (
@@ -191,5 +167,3 @@ CHANNEL_LAYERS = {
         'BACKEND': 'channels.layers.InMemoryChannelLayer',
     },
 }
-
-SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
