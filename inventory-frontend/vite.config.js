@@ -4,12 +4,17 @@ import tailwindcss from '@tailwindcss/vite'
 
 // https://vite.dev/config/
 export default defineConfig({
-  plugins: [react(),tailwindcss(),],
+  plugins: [react(), tailwindcss()],
+
+  server: {
+    host: "0.0.0.0",
+    port: process.env.PORT || 5173,
+    allowedHosts: "all"
+  },
+
   preview: {
     host: "0.0.0.0",
     port: process.env.PORT || 4173,
-    allowedHosts: [
-      "erp-inventory-system-2.onrender.com"
-    ]
+    allowedHosts: "all"
   }
 })
