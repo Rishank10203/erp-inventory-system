@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-y^&xgfkz)2-hj9#faeywj2r+zgqlotcnbzny9awj!2l7mwm-@u
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
@@ -78,6 +78,7 @@ TEMPLATES = [
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:5173",
     "http://127.0.0.1:5173",
+    "https://erp-inventory-system-woad.vercel.app",
 ]
 
 WSGI_APPLICATION = 'inventory_backend.wsgi.application'
