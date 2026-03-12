@@ -7,6 +7,7 @@ from rest_framework_simplejwt.serializers import TokenObtainPairSerializer
 class MyTokenObtainPairSerializer(TokenObtainPairSerializer):
     def validate(self, attrs):
         data = super().validate(attrs)
+          profile, created = Profile.objects.get_or_create(user=self.user)
         data['user'] = {
             'id': self.user.id,
             'username': self.user.username,
@@ -44,6 +45,7 @@ class RegisterSerializer(serializers.ModelSerializer):
         phone = validated_data.pop('phone')
         user = User.objects.create_user(**validated_data)
         # Profile is usually created via signal or manually here if no signal exists
+        profile, created = Profile.objects.get_or_create(user=user)
         user.profile.phone = phone
         user.profile.role = 'ADMIN'
         user.profile.save()
