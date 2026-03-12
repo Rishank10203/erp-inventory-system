@@ -28,7 +28,8 @@ DEBUG = True
 ALLOWED_HOSTS = [
     "localhost",
     "127.0.0.1",
-    ".onrender.com"
+    ".onrender.com",
+    "erp-inventory-system-8zrj.onrender.com",
 ]
 
 # Application definition
