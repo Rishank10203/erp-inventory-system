@@ -27,7 +27,8 @@ DEBUG = True
 ALLOWED_HOSTS = [
     "erp-inventory-system-8zrj.onrender.com",
     "localhost",
-    "127.0.0.1"
+    "127.0.0.1",
+    ".onrender.com"
 ]
 
 # Application definition
@@ -52,8 +53,8 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
-    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
