@@ -82,7 +82,7 @@ CORS_ALLOW_ALL_ORIGINS = True
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:5173",
     "http://127.0.0.1:5173",
-    "https://your-frontend.onrender.com"
+    "https://erp-inventory-system-2.onrender.com"
 ]
 
 WSGI_APPLICATION = 'inventory_backend.wsgi.application'
