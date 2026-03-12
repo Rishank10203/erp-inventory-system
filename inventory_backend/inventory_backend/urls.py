@@ -91,7 +91,7 @@ from billing.views import InvoiceViewSet
 
 from accounts.views import MyTokenObtainPairView
 from rest_framework_simplejwt.views import TokenRefreshView
-
+from rest_framework_simplejwt.views import TokenObtainPairView
 
 router = DefaultRouter()
 router.register(r'products', ProductViewSet)
@@ -104,7 +104,8 @@ urlpatterns = [
     path('admin/', admin.site.urls),
 
     # JWT
-    path('api/token/', MyTokenObtainPairView.as_view()),
+    # path('api/token/', MyTokenObtainPairView.as_view()),
+    path('api/token/', TokenObtainPairView.as_view()),
     path('api/token/refresh/', TokenRefreshView.as_view()),
 
     # accounts
