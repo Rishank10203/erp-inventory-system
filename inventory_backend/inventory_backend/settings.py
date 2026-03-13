@@ -119,7 +119,7 @@ ASGI_APPLICATION = 'inventory_backend.asgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'NAME': Path('/data/db.sqlite3') if Path('/data').exists() else BASE_DIR / 'db.sqlite3',
     }
 }
 
