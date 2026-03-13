@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const API = axios.create({
-  baseURL: "https://erp-inventory-system-8zrj.onrender.com/api/",
+  baseURL: import.meta.env.VITE_API_URL || (window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1" ? "http://127.0.0.1:8000/api/" : "/api/"),
 });
 
 // Request Interceptor
