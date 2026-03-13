@@ -82,8 +82,9 @@
 # ]
 
 from django.contrib import admin
-from django.urls import path, include
+from django.urls import path, include, re_path
 from rest_framework.routers import DefaultRouter
+from django.views.generic import TemplateView
 
 from products.views import ProductViewSet, low_stock_products
 from customers.views import CustomerViewSet
@@ -119,4 +120,7 @@ urlpatterns = [
 
     # products
     path('api/products/low-stock/', low_stock_products),
+
+    # React Frontend Catch-all
+    re_path(r'^.*$', TemplateView.as_view(template_name='index.html')),
 ]
