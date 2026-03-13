@@ -28,8 +28,7 @@ DEBUG = True
 ALLOWED_HOSTS = [
     "erp-inventory-system-8zrj.onrender.com",
     "localhost",
-    "127.0.0.1",
-    ".onrender.com"
+    "127.0.0.1"
 ]
 
 # Application definition
@@ -55,9 +54,9 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
-    'corsheaders.middleware.CorsMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -85,12 +84,7 @@ TEMPLATES = [
 CSRF_TRUSTED_ORIGINS = [
     "https://erp-inventory-system-2.onrender.com"
 ]
-CORS_ALLOWED_ORIGINS = [
-    "http://localhost:5173",
-    "http://127.0.0.1:5173",
-    "https://erp-inventory-system-2.onrender.com",
-    "https://erp-inventory-system-8zrj.onrender.com"
-]
+CORS_ALLOW_ALL_ORIGINS = True
 CORS_ALLOW_CREDENTIALS = True
 CORS_ALLOW_HEADERS = [
     "accept",
@@ -161,7 +155,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/6.0/howto/static-files/
 
 STATIC_URL = 'static/'
-STATIC_ROOT = BASE_DIR / "staticfiles"
+STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
 STATICFILES_DIRS = [
     BASE_DIR.parent / 'inventory-frontend' / 'dist' / 'static',
 ]
