@@ -121,7 +121,7 @@ const Customers = () => {
           </div>
         )}
         <Table
-          columns={["Name", "Email", "Phone", "GST_Number"]}
+          columns={["name", "email", "phone", "gst_number"]}
           data={customers}
           onEdit={(item) => { setForm(item); setErrors({}); setModal(true); }}
           onDelete={handleDelete}

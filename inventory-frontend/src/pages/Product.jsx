@@ -110,11 +110,8 @@ const Products = () => {
           </div>
         )}
         <Table
-          columns={["Name", "Price", "Stock", "gst_percent"]}
-          data={products.map(p => ({
-            ...p,
-            "Gst_%": p.gst_percent
-          }))}
+          columns={["name", "price", "stock", "gst_percent"]}
+          data={products}
           onEdit={(item) => { setForm(item); setErrors({}); setModal(true); }}
           onDelete={handleDelete}
           onView={(item) => { setSelectedProduct(item); setViewModal(true); }}

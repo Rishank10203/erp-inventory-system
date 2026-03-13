@@ -25,16 +25,15 @@ const Table = ({ columns = [], data = [], onEdit, onDelete, onView }) => {
         <thead className="bg-gray-50 border-b border-gray-100">
           <tr>
             {columns.map((col) => {
-              const key = col.toLowerCase();
               return (
                 <th
                   key={col}
                   className="p-4 text-sm font-semibold text-gray-600 cursor-pointer hover:bg-gray-100 transition-colors"
-                  onClick={() => requestSort(key)}
+                  onClick={() => requestSort(col)}
                 >
                   <div className="flex items-center space-x-1">
-                    <span>{col}</span>
-                    {sortConfig?.key === key && (
+                    <span className="capitalize">{col.replace(/_/g, " ")}</span>
+                    {sortConfig?.key === col && (
                       <span className="text-xs">
                         {sortConfig.direction === "ascending" ? "↑" : "↓"}
                       </span>
@@ -52,7 +51,7 @@ const Table = ({ columns = [], data = [], onEdit, onDelete, onView }) => {
             <tr key={row.id} className="hover:bg-blue-50/30 transition-colors group">
               {columns.map((col) => (
                 <td key={col} className="p-4 text-sm text-gray-700">
-                  {row[col.toLowerCase()]}
+                  {row[col]}
                 </td>
               ))}
               <td className="p-4 text-sm flex justify-center space-x-3">
