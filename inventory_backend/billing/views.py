@@ -38,7 +38,10 @@ def create_invoice(request):
         customer = Customer.objects.get(id=customer_id)
         invoice = Invoice.objects.create(
             customer=customer,
-            invoice_number=str(uuid.uuid4().hex[:8]).upper()
+            invoice_number=str(uuid.uuid4().hex[:8]).upper(),
+            total_amount=0,
+            gst_amount=0,
+            final_amount=0
         )
 
         total_amount = Decimal('0.00')
