@@ -26,7 +26,8 @@ SECRET_KEY = 'django-insecure-y^&xgfkz)2-hj9#faeywj2r+zgqlotcnbzny9awj!2l7mwm-@u
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = 'RENDER' not in os.environ
 ALLOWED_HOSTS = [
-    "erp-inventory-system-8zrj.onrender.com",
+     "erp-inventory-system-8zrj.onrender.com",
+    "erp-inventory-system-2.onrender.com",
     "localhost",
     "127.0.0.1"
 ]
@@ -54,8 +55,8 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
-    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -82,6 +83,10 @@ TEMPLATES = [
     },
 ]
 CSRF_TRUSTED_ORIGINS = [
+        "https://erp-inventory-system-2.onrender.com",
+    "https://erp-inventory-system-8zrj.onrender.com"
+]
+CORS_ALLOWED_ORIGINS = [
     "https://erp-inventory-system-2.onrender.com"
 ]
 CORS_ALLOW_ALL_ORIGINS = True
