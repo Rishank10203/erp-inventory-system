@@ -2,7 +2,7 @@ import { useContext } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { AuthContext } from "../context/AuthContext";
 
-const Sidebar = () => {
+const Sidebar = ({ isOpen, setIsOpen }) => {
   const location = useLocation();
   const { user, logout } = useContext(AuthContext);
 
@@ -15,12 +15,24 @@ const Sidebar = () => {
   ];
 
   return (
-    <div className="w-72 bg-slate-900 text-slate-300 flex flex-col h-full border-r border-slate-800 shadow-2xl">
-      <div className="p-8 border-b border-slate-800">
+    <div className={`fixed inset-y-0 left-0 z-50 w-72 bg-slate-900 text-slate-300 transform transition-transform duration-300 ease-in-out md:relative md:translate-x-0 ${
+      isOpen ? "translate-x-0" : "-translate-x-full"
+    } flex flex-col h-full shadow-2xl shrink-0`}>
+      <div className="p-6 border-b border-slate-800 flex justify-between items-center">
         <h2 className="text-xl font-black text-white tracking-tighter flex items-center space-x-2">
           <span className="bg-blue-600 p-1.5 rounded-lg text-[10px] leading-none">ERP</span>
           <span className="whitespace-nowrap">Smart Invoice</span>
         </h2>
+        
+        {/* Mobile close button */}
+        <button 
+          onClick={() => setIsOpen(false)}
+          className="md:hidden text-slate-400 hover:text-white p-1 rounded-lg hover:bg-slate-800 transition-colors"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-6 h-6">
+            <path strokeLinecap="round" strokeLinejoin="round" d="M6 18 18 6M6 6l12 12" />
+          </svg>
+        </button>
       </div>
 
       <nav className="flex-1 p-4 space-y-1 overflow-y-auto mt-4">

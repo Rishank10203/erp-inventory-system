@@ -61,7 +61,7 @@ const Registration = () => {
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-50 p-4">
-      <div className="max-w-5xl w-full bg-white rounded-[2.5rem] shadow-2xl overflow-hidden flex flex-col md:flex-row-reverse min-h-[600px]">
+      <div className="max-w-5xl w-full bg-white rounded-2xl shadow-xl border border-gray-200 overflow-hidden flex flex-col md:flex-row-reverse min-h-[600px]">
 
         {/* Registration Form Area */}
         <div className="w-full md:w-1/2 p-8 md:p-16 flex flex-col justify-center">
@@ -172,19 +172,19 @@ const Registration = () => {
 
           <div className="relative z-10 text-white space-y-12">
             <div className="grid grid-cols-2 gap-6 max-w-xs mx-auto">
-              <div className="p-6 bg-white/5 backdrop-blur-md rounded-[2rem] border border-white/10 shadow-2xl flex flex-col items-center group hover:bg-white/10 transition-all">
+              <div className="p-6 bg-white/5 backdrop-blur-md rounded-2xl border border-white/10 shadow-lg flex flex-col items-center group hover:bg-white/10 transition-all">
                 <span className="text-4xl mb-3 group-hover:scale-110 transition-transform">📊</span>
                 <span className="text-[10px] font-black uppercase tracking-tighter text-blue-400">Reports</span>
               </div>
-              <div className="p-6 bg-white/5 backdrop-blur-md rounded-[2rem] border border-white/10 shadow-2xl flex flex-col items-center group hover:bg-white/10 transition-all">
+              <div className="p-6 bg-white/5 backdrop-blur-md rounded-2xl border border-white/10 shadow-lg flex flex-col items-center group hover:bg-white/10 transition-all">
                 <span className="text-4xl mb-3 group-hover:scale-110 transition-transform">🛡️</span>
                 <span className="text-[10px] font-black uppercase tracking-tighter text-indigo-400">Security</span>
               </div>
-              <div className="p-6 bg-white/5 backdrop-blur-md rounded-[2rem] border border-white/10 shadow-2xl flex flex-col items-center group hover:bg-white/10 transition-all">
+              <div className="p-6 bg-white/5 backdrop-blur-md rounded-2xl border border-white/10 shadow-lg flex flex-col items-center group hover:bg-white/10 transition-all">
                 <span className="text-4xl mb-3 group-hover:scale-110 transition-transform">⚡</span>
                 <span className="text-[10px] font-black uppercase tracking-tighter text-purple-400">Velocity</span>
               </div>
-              <div className="p-6 bg-white/5 backdrop-blur-md rounded-[2rem] border border-white/10 shadow-2xl flex flex-col items-center group hover:bg-white/10 transition-all">
+              <div className="p-6 bg-white/5 backdrop-blur-md rounded-2xl border border-white/10 shadow-lg flex flex-col items-center group hover:bg-white/10 transition-all">
                 <span className="text-4xl mb-3 group-hover:scale-110 transition-transform">🌍</span>
                 <span className="text-[10px] font-black uppercase tracking-tighter text-teal-400">Global</span>
               </div>

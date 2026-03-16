@@ -20,10 +20,11 @@ const Table = ({ columns = [], data = [], onEdit, onDelete, onView }) => {
   };
 
   return (
-    <div className="bg-white shadow-xl rounded-2xl overflow-hidden border border-gray-100">
-      <table className="w-full text-left border-collapse">
-        <thead className="bg-gray-50 border-b border-gray-100">
-          <tr>
+    <div className="bg-white shadow-sm rounded-xl border border-gray-200 overflow-hidden">
+      <div className="overflow-x-auto">
+        <table className="w-full text-left border-collapse whitespace-nowrap">
+          <thead className="bg-gray-50 border-b border-gray-200">
+            <tr>
             {columns.map((col) => {
               return (
                 <th
@@ -85,6 +86,7 @@ const Table = ({ columns = [], data = [], onEdit, onDelete, onView }) => {
           )}
         </tbody>
       </table>
+      </div>
     </div>
   );
 };

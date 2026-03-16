@@ -48,7 +48,7 @@ const Login = () => {
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-50 p-4">
-      <div className="max-w-5xl w-full bg-white rounded-[2.5rem] shadow-2xl overflow-hidden flex flex-col md:flex-row min-h-[600px]">
+      <div className="max-w-5xl w-full bg-white rounded-2xl shadow-xl border border-gray-200 overflow-hidden flex flex-col md:flex-row min-h-[600px]">
 
         {/* Login Form Section */}
         <div className="w-full md:w-1/2 p-8 md:p-16 flex flex-col justify-center">
@@ -122,19 +122,19 @@ const Login = () => {
           </div>
 
           <div className="relative z-10 grid grid-cols-2 gap-8">
-            <div className="p-8 bg-white/10 backdrop-blur-xl rounded-[2.5rem] border border-white/20 shadow-2xl flex flex-col items-center group hover:-translate-y-2 transition-transform duration-300">
+            <div className="p-8 bg-white/10 backdrop-blur-xl rounded-2xl border border-white/20 shadow-lg flex flex-col items-center group hover:-translate-y-2 transition-transform duration-300">
               <span className="text-6xl mb-4 drop-shadow-lg">📈</span>
               <span className="text-[12px] font-black text-white uppercase tracking-widest text-center">Revenue Control</span>
             </div>
-            <div className="p-8 bg-white/10 backdrop-blur-xl rounded-[2.5rem] border border-white/20 shadow-2xl flex flex-col items-center group hover:-translate-y-2 transition-transform duration-300 delay-75">
+            <div className="p-8 bg-white/10 backdrop-blur-xl rounded-2xl border border-white/20 shadow-lg flex flex-col items-center group hover:-translate-y-2 transition-transform duration-300 delay-75">
               <span className="text-6xl mb-4 drop-shadow-lg">📦</span>
               <span className="text-[12px] font-black text-white uppercase tracking-widest text-center">Inventory Hub</span>
             </div>
-            <div className="p-8 bg-white/10 backdrop-blur-xl rounded-[2.5rem] border border-white/20 shadow-2xl flex flex-col items-center group hover:-translate-y-2 transition-transform duration-300 delay-150">
+            <div className="p-8 bg-white/10 backdrop-blur-xl rounded-2xl border border-white/20 shadow-lg flex flex-col items-center group hover:-translate-y-2 transition-transform duration-300 delay-150">
               <span className="text-6xl mb-4 drop-shadow-lg">🧾</span>
               <span className="text-[12px] font-black text-white uppercase tracking-widest text-center">Instant Billing</span>
             </div>
-            <div className="p-8 bg-white/10 backdrop-blur-xl rounded-[2.5rem] border border-white/20 shadow-2xl flex flex-col items-center group hover:-translate-y-2 transition-transform duration-300 delay-225">
+            <div className="p-8 bg-white/10 backdrop-blur-xl rounded-2xl border border-white/20 shadow-lg flex flex-col items-center group hover:-translate-y-2 transition-transform duration-300 delay-225">
               <span className="text-6xl mb-4 drop-shadow-lg">💼</span>
               <span className="text-[12px] font-black text-white uppercase tracking-widest text-center">Admin Suite</span>
             </div>

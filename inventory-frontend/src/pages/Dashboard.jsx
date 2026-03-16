@@ -33,15 +33,24 @@ const Dashboard = () => {
   ];
 
   return (
-    <div className="space-y-10 animate-in fade-in slide-in-from-top-4 duration-700">
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+    <div className="space-y-8 animate-in fade-in slide-in-from-top-4 duration-700">
+      <div className="mb-8">
+        <h2 className="text-2xl font-bold text-gray-900 tracking-tight">Overview</h2>
+        <p className="text-sm text-gray-500 mt-1">Here's what's happening with your business today.</p>
+      </div>
+
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
         {cards.map((card, i) => (
-          <div key={i} className="bg-white p-6 rounded-3xl border border-gray-100 shadow-xl shadow-gray-200/40 hover:scale-[1.02] transition-all duration-300">
-            <div className={`w-12 h-12 rounded-2xl ${card.color} flex items-center justify-center text-2xl mb-4`}>
-              {card.icon}
+          <div key={i} className="bg-white p-6 rounded-2xl border border-gray-200 shadow-sm hover:shadow-md transition-shadow duration-300 flex flex-col justify-between">
+            <div className="flex justify-between items-start mb-4">
+              <div className={`w-12 h-12 rounded-xl flex items-center justify-center text-2xl ${card.color} bg-opacity-20`}>
+                {card.icon}
+              </div>
             </div>
-            <p className="text-sm font-bold text-gray-400 uppercase tracking-widest">{card.title}</p>
-            <h3 className="text-3xl font-black text-gray-800 mt-1">{card.value}</h3>
+            <div>
+              <p className="text-sm font-medium text-gray-500">{card.title}</p>
+              <h3 className="text-3xl font-bold text-gray-900 mt-1">{card.value}</h3>
+            </div>
           </div>
         ))}
       </div>

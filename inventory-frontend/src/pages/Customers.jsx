@@ -87,34 +87,34 @@ const Customers = () => {
   };
 
   return (
-    <div className="p-8 space-y-8 animate-in fade-in duration-700">
-      <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
+    <div className="p-4 sm:p-8 space-y-6 sm:space-y-8 animate-in fade-in duration-700">
+      <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-6">
         <div>
-          <h1 className="text-4xl font-black text-slate-800 tracking-tighter italic text-linear-to-r from-slate-900 to-slate-500 bg-clip-text">Client Network</h1>
+          <h1 className="text-3xl sm:text-4xl font-black text-slate-800 tracking-tighter italic text-linear-to-r from-slate-900 to-slate-500 bg-clip-text">Client Network</h1>
           <p className="text-slate-500 font-bold uppercase tracking-widest text-xs mt-1">Relationship & GST Management</p>
         </div>
 
-        <div className="flex w-full md:w-auto gap-4">
-          <div className="relative flex-1 md:w-80">
+        <div className="flex flex-col sm:flex-row w-full lg:w-auto gap-4">
+          <div className="relative flex-1 lg:w-80">
             <span className="absolute left-4 top-1/2 -translate-y-1/2 text-xl opacity-30">🔍</span>
             <input
               type="text"
               placeholder="Filter clients..."
-              className="w-full pl-12 pr-4 py-4 bg-white border-2 border-slate-100 rounded-2xl focus:border-blue-500/50 outline-none transition-all font-semibold shadow-sm"
+              className="w-full pl-12 pr-4 py-3 sm:py-4 bg-white border border-slate-200 rounded-xl focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 outline-none transition-all font-semibold shadow-sm"
               value={search}
               onChange={(e) => setSearch(e.target.value)}
             />
           </div>
           <button
             onClick={() => { setForm({}); setErrors({}); setModal(true); }}
-            className="bg-indigo-600 text-white px-8 py-4 rounded-2xl font-black shadow-xl shadow-indigo-500/30 hover:scale-105 active:scale-95 transition-all text-sm uppercase tracking-wider"
+            className="w-full sm:w-auto bg-indigo-600 text-white px-8 py-3 sm:py-4 rounded-xl font-bold shadow-sm hover:bg-indigo-700 active:scale-95 transition-all text-sm uppercase tracking-wider"
           >
             + New Client
           </button>
         </div>
       </div>
 
-      <div className="bg-white rounded-[2.5rem] shadow-xl shadow-slate-200/50 border border-slate-100 overflow-hidden relative">
+      <div className="relative min-h-[300px]">
         {loading && (
           <div className="absolute inset-0 bg-white/60 backdrop-blur-[2px] z-10 flex items-center justify-center">
             <div className="w-10 h-10 border-4 border-indigo-600 border-t-transparent rounded-full animate-spin"></div>

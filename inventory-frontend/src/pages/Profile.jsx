@@ -33,8 +33,8 @@ const Profile = () => {
 
     return (
         <div className="max-w-4xl mx-auto space-y-8 animate-in fade-in slide-in-from-bottom-4 duration-700">
-            <div className="bg-white p-8 rounded-3xl border border-gray-100 shadow-xl shadow-gray-200/40 relative overflow-hidden">
-                <div className="absolute top-0 left-0 w-full h-2 bg-blue-600"></div>
+            <div className="bg-white p-8 rounded-2xl border border-gray-200 shadow-sm relative overflow-hidden">
+                <div className="absolute top-0 left-0 w-full h-1 bg-blue-600"></div>
                 <div className="flex flex-col md:flex-row items-center gap-8">
                     <div className="w-32 h-32 rounded-full bg-blue-600 flex items-center justify-center text-5xl font-black text-white shadow-2xl shadow-blue-500/20">
                         {profile.first_name ? profile.first_name[0] : profile.username[0].toUpperCase()}
@@ -49,7 +49,7 @@ const Profile = () => {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div className="bg-white p-6 rounded-3xl border border-gray-100 shadow-sm space-y-4">
+                <div className="bg-white p-6 rounded-2xl border border-gray-200 shadow-sm space-y-4">
                     <h3 className="text-xs font-black text-gray-400 uppercase tracking-widest mb-4">Account Information</h3>
                     <div className="space-y-4">
                         <div className="flex justify-between items-center py-2 border-b border-gray-50">
@@ -63,7 +63,7 @@ const Profile = () => {
                     </div>
                 </div>
 
-                <div className="bg-white p-6 rounded-3xl border border-gray-100 shadow-sm space-y-4">
+                <div className="bg-white p-6 rounded-2xl border border-gray-200 shadow-sm space-y-4">
                     <h3 className="text-xs font-black text-gray-400 uppercase tracking-widest mb-4">System Details</h3>
                     <div className="space-y-4">
                         <div className="flex justify-between items-center py-2 border-b border-gray-50">

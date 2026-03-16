@@ -98,22 +98,22 @@ const Billing = () => {
   };
 
   return (
-    <div className="p-8 space-y-8 animate-in fade-in duration-700">
-      <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
+    <div className="p-4 sm:p-8 space-y-6 sm:space-y-8 animate-in fade-in duration-700">
+      <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-6">
         <div>
-          <h1 className="text-4xl font-black text-slate-800 tracking-tighter italic">Billing & Invoices</h1>
+          <h1 className="text-3xl sm:text-4xl font-black text-slate-800 tracking-tighter italic">Billing & Invoices</h1>
           <p className="text-slate-500 font-bold uppercase tracking-widest text-xs mt-1">Manage sales and inventory updates</p>
         </div>
 
         <button
           onClick={() => setInvoiceModal(true)}
-          className="bg-blue-600 text-white px-8 py-4 rounded-2xl font-black shadow-xl shadow-blue-500/30 hover:scale-105 active:scale-95 transition-all text-sm uppercase tracking-wider flex items-center gap-2"
+          className="w-full sm:w-auto bg-blue-600 text-white px-8 py-3 sm:py-4 rounded-xl font-bold shadow-sm hover:bg-blue-700 active:scale-95 transition-all text-sm uppercase tracking-wider flex justify-center items-center gap-2"
         >
           + Create Invoice
         </button>
       </div>
 
-      <div className="bg-white rounded-[2.5rem] shadow-xl shadow-slate-200/50 border border-slate-100 overflow-hidden">
+      <div className="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden">
         <div className="overflow-x-auto">
           <table className="w-full text-left">
             <thead>
